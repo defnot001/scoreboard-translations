@@ -97,7 +97,7 @@ fn write_files(stats: Vec<Stats>) -> Result<(), Box<dyn Error>> {
 }
 
 fn translate_stat(name: String) -> String {
-    let parts: Vec<&str> = name.split(":").to_owned().collect();
+    let parts: Vec<&str> = name.split(':').to_owned().collect();
 
     format!("{}-{}", shorten_scoreboard_type(parts[0]), &parts[1][10..])
 }
